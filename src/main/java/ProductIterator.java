@@ -1,4 +1,4 @@
-public class Product Iterator {
+public class ProductIterator {
 
 	private ClassProductList classProductList;
 
