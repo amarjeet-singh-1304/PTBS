@@ -5,8 +5,6 @@ import java.util.ArrayList;
 
 public class MeatProductMenu implements ProductMenu {
 
-
-
 	public void showMenu() {
 			ArrayList<String> meatProductList = new ArrayList<String>();
 			try {
