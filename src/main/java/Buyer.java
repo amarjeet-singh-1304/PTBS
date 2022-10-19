@@ -1,16 +1,24 @@
 public class Buyer extends Person {
 
-	Buyer( ProductMenu pm){
-		super(pm);
+
+	Buyer()
+	{
+		super(theProductMenu);
+
+	}
+	Buyer( ProductMenu theProductMenu){
+		super(theProductMenu);
 	}
 
+	@Override
 	public void showMenu() {
-		System.out.println("Showing Menu:");
+
 		theProductMenu.showMenu();
 
 	}
 
 	public ProductMenu CreateProductMenu() {
+		String productMenutype = "";
 		return null;
 	}
 

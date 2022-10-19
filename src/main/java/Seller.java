@@ -1,8 +1,8 @@
 public class Seller extends Person {
 
-	/**
-	 *  
-	 */
+	Seller(){
+		super(theProductMenu);
+	}
 
 	Seller( ProductMenu pm){
 		super(pm);
@@ -15,11 +15,9 @@ public class Seller extends Person {
 
 	@Override
 	public ProductMenu CreateProductMenu() {
+
 		return null;
 	}
 
-	public ProductMenu createProductMenu() {
-		return null;
-	}
 
 }
