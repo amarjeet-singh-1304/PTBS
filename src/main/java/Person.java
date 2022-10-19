@@ -1,14 +1,14 @@
 public abstract class Person {
 
-	protected ProductMenu theProductMenu;
+	protected static ProductMenu theProductMenu;
 
-	Person(ProductMenu pm){
-		this.theProductMenu = pm;
+	Person(ProductMenu theProductMenu){
+		this.theProductMenu = theProductMenu;
 	}
-
 
 	public abstract void showMenu();
 
 	public abstract ProductMenu CreateProductMenu();
+
 
 }
