@@ -2,12 +2,13 @@ import java.io.FileNotFoundException;
 
 public interface ProductMenu {
 
-	Person person=null;
+	Person person = null;
 
 	public abstract void showMenu() ;
 
+	public abstract void selectProduct(int userType);
 	/**
-	 *  
+	 *
 	 */
 	public abstract void showAddButton();
 

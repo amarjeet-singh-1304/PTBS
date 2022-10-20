@@ -1,3 +1,4 @@
+
 public class Buyer extends Person {
 
 
@@ -10,8 +11,8 @@ public class Buyer extends Person {
 		super(theProductMenu);
 	}
 
-	@Override
-	public void showMenu() {
+
+	public void showMenu(ProductMenu theProductMenu, String userName, int userType) {
 
 		theProductMenu.showMenu();
 
@@ -21,5 +22,6 @@ public class Buyer extends Person {
 		String productMenutype = "";
 		return null;
 	}
+
 
 }

@@ -6,7 +6,7 @@ public abstract class Person {
 		this.theProductMenu = theProductMenu;
 	}
 
-	public abstract void showMenu();
+	public abstract void showMenu( ProductMenu pm, String userName, int productType);
 
 	public abstract ProductMenu CreateProductMenu();
 

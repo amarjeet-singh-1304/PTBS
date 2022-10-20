@@ -1,7 +1,18 @@
+import java.util.ArrayList;
+
 public class Product {
+	public String productName;
+	public ArrayList<Trading> tradingList=new ArrayList<Trading>();
+	public int userType;
+	public Product(String productname,int type)
+	{
+		this.productName=productname;
+		this.userType=type;
+	}
 
-	private ClassProductList classProductList;
-
-	private Trading trading;
+	public void addTrading(Trading trade)
+	{
+		tradingList.add(trade);
+	}
 
 }

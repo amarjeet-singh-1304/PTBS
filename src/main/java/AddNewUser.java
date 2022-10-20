@@ -2,34 +2,28 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class AddNewUser {
+    Properties props = new Properties();
 
-    void AddDetailsToConfig(int type, String username, String password)
+    void AddDetailsToConfig(String path, String username, String password)
     {
-        Properties props = new Properties();
-        props.put(username, password);
-        String path = "";
-        if(type == 1)
-        {
-            path = "src/main/resources/SellerInfo.txt";
 
-            }
-        else if (type == 0) {
-            path = "src/main/resources/BuyerInfo.txt";
-        }
+        props.put(username, password);
         try
         {
-            System.out.println(username + password + path);
             File file = new File(path);
             FileInputStream fileIn = new FileInputStream(file);
             props.load(fileIn);
-            System.out.println(fileIn);
+            fileIn.close();
             FileOutputStream outputStream = new FileOutputStream(path);
-            System.out.println(outputStream);
-            props.store(outputStream, "This is a sample properties file");
+            props.store(outputStream, "");
+            outputStream.flush();
             outputStream.close();
+            System.out.println("Details Added Successfully");
+
         }
         catch (Exception e)
         {
@@ -37,5 +31,10 @@ public class AddNewUser {
         }
 
 
+    }
+
+    void GetDetails()
+    {
+        System.out.println("");
     }
 }

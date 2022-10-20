@@ -5,7 +5,7 @@ public class PersonFactory extends  Person{
     }
 
     @Override
-    public void showMenu() {
+    public void showMenu( ProductMenu pm, String userName, int productType) {
 
     }
 
