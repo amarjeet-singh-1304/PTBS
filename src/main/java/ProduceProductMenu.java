@@ -8,6 +8,7 @@ public class ProduceProductMenu implements ProductMenu {
 	public void showMenu()  {
 
 		try {
+			System.out.println("Showing Produce Products list:");
 			File file = new File("src/main/resources/ProductInfo.txt");
 			BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -28,6 +29,20 @@ public class ProduceProductMenu implements ProductMenu {
 			System.out.println("File Not Found"+ e);
 		}
 
+	}
+	public void selectProduct(int userType) {
+		System.out.println("Produce Product Menu Selected:");
+		Person person;
+		if (userType == 0) {
+			person = PersonFactory.CreateUserObject(0);
+
+		} else
+		{
+			person = PersonFactory.CreateUserObject(1);
+
+		}
+
+		new ProduceProductMenu().showMenu();
 	}
 
 	public void showAddButton() {
@@ -51,5 +66,7 @@ public class ProduceProductMenu implements ProductMenu {
 	public void showComboxes() {
 
 	}
+
+
 
 }

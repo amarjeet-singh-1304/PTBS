@@ -4,9 +4,14 @@ public class ClassProductList {
 
 	private ReminderVisitor reminderVisitor;
 
-	private Product Iterator product Iterator;
+	private ProductIterator productIterator;
+
+	ClassProductList(){
+
+	}
 
 	public void accept(NodeVisitor visitor) {
+
 
 	}
 

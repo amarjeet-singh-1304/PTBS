@@ -5,12 +5,13 @@ public class Login  {
 
     Login(){}
     String[] details = new String[2];
+    String username = "";
     public boolean HasAccess() {
         boolean output = false;
         Scanner reader = new Scanner(System.in);
         System.out.println("Login Window :");
         System.out.println("Enter your username:");
-        String username = reader.nextLine();
+        username = reader.nextLine();
         System.out.println("Enter Password:");
         String password = reader.nextLine();
         String exactPassword = "";
@@ -49,6 +50,11 @@ public class Login  {
             return 0;
         else
             return 1;
+    }
+
+    public String getUserName()
+    {
+        return username;
     }
 
 

@@ -8,6 +8,7 @@ public class MeatProductMenu implements ProductMenu {
 	public void showMenu() {
 			ArrayList<String> meatProductList = new ArrayList<String>();
 			try {
+				System.out.println("Showing Meat Products Menu:");
 				File file = new File("src/main/resources/ProductInfo.txt");
 				BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -30,6 +31,21 @@ public class MeatProductMenu implements ProductMenu {
 
 
 		}
+
+	@Override
+	public void selectProduct(int userType) {
+		System.out.println("Meat Product Menu Selected:");
+		Person person;
+		if (userType == 0) {
+			person = PersonFactory.CreateUserObject(0);
+
+		} else
+		{
+			person = PersonFactory.CreateUserObject(1);
+
+		}
+		 new MeatProductMenu().showMenu();
+	}
 
 	/**
 	 *  
