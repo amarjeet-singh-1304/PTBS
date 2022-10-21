@@ -1,2 +1,4 @@
 # PTBS
-Repository for Builder Pattern Individual Assignment
+Repository for PTBS system
+
+Please run the project from  PTBS class
