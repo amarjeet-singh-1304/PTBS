@@ -37,7 +37,8 @@ public class Login  {
             }
 
         } else {
-            System.out.println("Please Enter Valid Username or Password");
+            System.out.println("\nPlease Enter Valid Username or Password");
+            System.exit(0);
         }
 
         return output;

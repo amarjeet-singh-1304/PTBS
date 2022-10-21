@@ -7,19 +7,52 @@ public class ProductIterator implements  ListIterator{
 	private List<Product> productList;
 	private int position;
 
-	public boolean hasNext(Iterator iter) {
-		if(iter.next() != null)
-			return iter.hasNext();
-		else
-			return false;
+	int productnumber=-1;
+
+	public ProductIterator(ClassProductList productList){
+		this.classProductList = productList;
 	}
 
-	public Product Next(Iterator iter) {
-		if(this.hasNext(iter))
+	public boolean hasNext() {
+		if(productnumber>=productList.size()-1)
 		{
-			return (Product) iter.next();
+			return false;
 		}
-		else return null;
+		return true;
+	}
+
+	public Object Next() {
+		if (hasNext()==true)
+		{
+			productnumber++;
+			return productList.get(productnumber);
+		}
+		return null;
+		// TODO Auto-generated method stub
+	}
+
+	public Object next(String productName) {
+		Product product;
+		product=(Product)Next();
+		while(product!=null)
+		{
+			if(productName.compareTo(product.toString())==0)
+			{
+				return product;
+			}
+			product=(Product)Next();
+		}
+		return null;
+	}
+
+	@Override
+	public boolean hasNext(Iterator iter) {
+		return false;
+	}
+
+	@Override
+	public Object Next(Iterator iter) {
+		return null;
 	}
 
 	public void MoveToHead(Iterator iter) {
