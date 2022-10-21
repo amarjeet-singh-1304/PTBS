@@ -57,9 +57,11 @@ public class Facade  {
 			int value1 = scanner.nextInt();
 			if(value1 == 1)
 			{
+
 				OfferingList offeringList = new OfferingList();
 				Iterator itr = offeringList.createIterator();
 				OfferingIterator offeringIterator = new OfferingIterator();
+				//Using iterator patterns. Calling functions hasNext
 				while(offeringIterator.hasNext(itr))
 				{
 					String k = offeringIterator.Next(itr);
@@ -209,7 +211,9 @@ public class Facade  {
 
 	}
 
+	//Showing products based on selected options based on Meat and Produce
 	public void SelectProduct( ProductMenu pm , int userType, String userName, int productType) {
+
 		if(userType == 0)
 		{
 			Buyer buyer = new Buyer();

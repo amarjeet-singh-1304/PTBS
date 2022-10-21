@@ -10,6 +10,7 @@ public class ReadConfig {
 
     String usertype = "";
 
+    //Function to read values from Properties files or text files
     public String[] getPropValues(String username) throws IOException {
         String[] details = new String[2];
         try {

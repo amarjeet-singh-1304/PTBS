@@ -6,6 +6,8 @@ public class Login  {
     Login(){}
     String[] details = new String[2];
     String username = "";
+
+    // Method if user has the access or not
     public boolean HasAccess() {
         boolean output = false;
         Scanner reader = new Scanner(System.in);
@@ -45,6 +47,7 @@ public class Login  {
 
     }
 
+    //Getting User Type while Login (Buyer and Seller)
     public Integer GetUserType()
     {
         if(details[1] == "Buyer")

@@ -14,6 +14,8 @@ public class PersonFactory extends  Person{
         return null;
     }
 
+    //Function to create the user object and show reminder to each accordingly
+
     public static Person CreateUserObject(int usertype ) {
         Person person;
         System.out.println("Implementing Factory Method");

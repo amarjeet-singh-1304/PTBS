@@ -4,6 +4,7 @@ public class OfferingIterator implements ListIterator {
 
 	private OfferingList offeringList;
 
+	//Check if list has Next value or not
 	public boolean hasNext(Iterator iterator) {
 		if(iterator.next() == null)
 			return false;

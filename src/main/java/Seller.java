@@ -40,6 +40,7 @@ public class Seller extends Person {
 		writeOfferingToConfig(offering);
 
 	}
+	// Function to write offerings in a file for the buyers
 	public void writeOfferingToConfig( Offering o)
 	{
 
